@@ -1,0 +1,74 @@
+
+.page-item.disabled 
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus,
+.page-item.active .page-link {
+  background: $primary;
+  border-color: $primary;
+  
+}
+
+
+/*-- Costum --*/
+
+.pagination{
+  .page-link {
+    color: $gray-600;
+    background-color: $white;
+    border: 1px solid $gray-400;
+    &:focus{
+      box-shadow: 0 0 0 0.15rem rgba($primary,.35);
+      background-color: rgba($primary,.15);
+    }
+  }
+  .page-item.disabled{
+    .page-link {
+      color: $gray-500;
+    }
+  }
+}
+
+.custom-pagination {
+  .page-link {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-left: 14px;
+    line-height: 24px;
+    color: $gray-600;
+    &:focus{
+      box-shadow: 0 0 0 0.15rem rgba($primary,.35);
+      background-color: rgba($primary,.15);
+    }
+  }
+  .active .page-link{
+    background-color: rgba($primary,0.15);
+    border:1px solid rgba($primary,0.5);
+    color: $primary;
+    border-radius: 50%;
+  }
+}
+
+.custom-pagination2 span{   
+    color: $primary;
+    background-color: rgba($primary,0.15);
+    border:1px solid rgba($primary,0.5);
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8%;
+}
+
+
+@media (max-width: 620px){
+  .pagination-lg .page-link {
+      padding: .25rem .5rem;
+      font-size: 15px;
+  }
+}

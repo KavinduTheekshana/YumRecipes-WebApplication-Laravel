@@ -1,0 +1,50 @@
+
+.progress{
+    background-color:  $gray-200;
+    border-radius: 50px;
+    height: 10px;
+}
+.progress-bar {
+    background-color: $primary;
+}
+.progress-animated {
+    width: 0;
+    animation: progress 3s ease-in-out forwards;
+} 
+@keyframes progress {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+} 
+  @keyframes show  {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+/* Progressbar Vertical */
+
+
+.progress-vertical-bottom,
+.progress-vertical {
+    min-height: 250px;
+    height: 250px;
+    width: 10px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+.progress-vertical-bottom .progress-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+

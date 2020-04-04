@@ -1,0 +1,101 @@
+
+.nav-tabs,.nav-pills {
+  .nav-link {
+    color: $dark;
+    font-weight: 400;
+  }
+}
+
+.nav-tabs-custom {
+  border-bottom: 2px solid $gray-300;
+
+  .nav-item {
+    position: relative;
+
+    .nav-link {
+      border: none !important;
+      font-weight: 400;
+    }
+  }
+}
+
+.nav-tabs-custom > li > a {
+  color: $dark;
+}
+
+.nav-tabs-custom > li > a::after {
+  content: "";
+  background: $primary;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.nav-tabs-custom > li > a.active::after, .nav-tabs-custom > li:hover > a::after {
+  transform: scale(1);
+}
+
+.nav-tabs-custom > li > a.active {
+  color: $primary !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background: $primary;
+}
+/*--accordion--*/
+
+.accordion {
+  box-shadow: none;
+  .card,
+  .btn:focus{
+    box-shadow: none;
+  }
+  .card-header{
+    background-color: rgba($gray-200, .5);
+    border: 1px solid rgba($gray-400, .5);
+    padding: 0 12px;
+  } 
+  .btn{
+    margin-bottom: 0;
+  }
+}
+
+#accordionExample .card-header h5{
+  button.collapsed::before{
+    content: "\f067";
+    transform: rotate(-90deg);
+  }
+  button::before {
+    content: "\f068";
+    font-family: 'Font Awesome 5 Free' !important;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transition: transform .25s;
+    transform: rotate(0deg);
+    color: $primary;
+  }
+} 
+
+#accordionExample2 .card-header h5 {
+  button.collapsed::before {
+    content: '\f107';
+    transform: rotate(-180deg);
+  }
+  button::before {
+    content: '\f106';
+    font-family: 'Font Awesome 5 Free' !important;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    transition: transform .25s;
+    transform: rotate(180deg);
+    color: $primary;
+  }
+}

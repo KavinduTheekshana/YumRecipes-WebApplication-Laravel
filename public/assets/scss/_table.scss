@@ -1,0 +1,91 @@
+
+th {
+  font-weight: 500;
+}
+
+.table-bordered {
+    thead {
+        background-color: $gray-100;
+        td,
+        th {
+            font-weight: 500;
+        }
+    }
+}
+
+.table-striped {
+    tbody {
+        tr:nth-of-type(odd) {
+            background-color: transparent;
+        }
+        tr:nth-of-type(even) {
+            background-color: rgba($gray-100, .4);
+        }
+    }
+}
+
+.table {
+    thead tr th {
+        font-weight: 500;
+        color: $gray-600;
+        background-color: $gray-200;
+        font-size: 13px;
+    }
+    td {
+        vertical-align: middle;
+    }
+}
+
+.table-hover tbody tr:hover {
+    background-color: $gray-100;
+}
+
+.table-dark {
+    thead tr th {
+        background-color: $light;
+        border-top-color: transparent;
+    }
+    tbody>tr>td,
+    th {
+        color: $gray-100;
+        background-color: $dark;
+    }
+}
+
+/*== Table Responsive ==*/
+
+.table-rep-plugin {
+    .btn-toolbar {
+        display: block;
+    }
+    .btn-default {
+        border-color: rgba($primary, 0.3);
+        background-color: rgba($primary, 0.2);
+        color: $primary;
+        margin-right: 5px;
+        &:focus {
+            color: $primary;
+        }
+    }
+    .btn-default.btn-primary:active,
+    .btn-default.btn-primary:hover,
+    .btn-default.btn-primary:focus {
+        border-color: rgba($primary, 0.3) !important;
+        background-color: rgba($primary, 0.2) !important;
+        color: $primary;
+    }
+    tbody th {
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+table.focus-on tbody tr.focused th, table.focus-on tfoot tr.focused th, table.focus-on tbody tr.focused td, table.focus-on tfoot tr.focused td {
+    background-color: $primary;
+    color: $white;
+    border-color: $primary;
+}
+
+/* Sticky Header */
+.fixed-solution .sticky-table-header {
+  top: $topbar-height !important;
+}

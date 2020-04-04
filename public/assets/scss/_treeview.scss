@@ -1,0 +1,16 @@
+
+.jstree-open>.jstree-anchor>.fa-folder:before {
+  margin-left: 2px;
+  content: "\f07c";
+}
+.fa-folder:before {
+  content: "\f07b";
+}
+
+.jstree-anchor > .jstree-themeicon {
+  margin-right: 6px;
+}
+.jstree-default .jstree-anchor {
+  line-height: 24px;
+  height: 32px;
+}

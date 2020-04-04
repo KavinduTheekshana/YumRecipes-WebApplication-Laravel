@@ -1,0 +1,40 @@
+
+#accordionExample-faq {
+  .btn{
+    white-space: normal;
+  }
+  .card{
+    box-shadow: none;
+    .card-header h5 button.collapsed::before{
+      content: "\f107";
+      transform: rotate(-180deg);
+      font-size: 18px;
+    }
+    .card-header {
+      padding: 4px 12px 0 0;
+      h5 button::before {
+        content: "\f106";
+        font-family: 'Font Awesome 5 Free' !important;
+        font-weight: 600;
+        position: absolute;
+        top: 14px;
+        right:25px ;
+        transition: transform .25s;
+        transform: rotate(180deg);
+        color: $primary;
+        font-size: 18px;
+      }
+    }
+    .card-body{
+      background-color: lighten($gray-100, 2%);
+      border:  1px solid $gray-200;
+    }
+  }
+  
+}
+
+@media (max-width: 1024px){
+  .mo-b-15{
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,15 @@
+
+.irs-from, 
+.irs-to, 
+.irs-single {
+  color: $white;
+  background: $primary;
+  line-height: 13px;
+  padding-top: 4px;
+}
+
+.irs-from:after, 
+.irs-to:after, 
+.irs-single:after{
+  border-top-color: $primary;
+}

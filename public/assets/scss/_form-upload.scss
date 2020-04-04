@@ -1,0 +1,13 @@
+
+
+
+.dropzone {
+    min-height: 230px;
+    border: 2px dashed $gray-500;
+    background:$gray-100;
+    border-radius: 6px;
+  
+    .dz-message {
+      font-size: 26px;
+    }
+  }

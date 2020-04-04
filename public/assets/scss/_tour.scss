@@ -1,0 +1,27 @@
+
+
+.tour-backdrop {
+  position: absolute;
+  z-index: 800;
+  background-color: $dark;
+  opacity: .5;
+}
+
+.tour-tour .popover-title {
+  color: $dark;
+  font-size: 18px;
+  padding: 10px;
+}
+.popover-content {
+  padding: 10px 14px;
+}
+.tour-active{
+  opacity: 1 !important;
+}
+.popover.left>.arrow{
+  border-left-color: $white;
+}
+
+.popover.right>.arrow{
+  border-right-color: $white;
+}

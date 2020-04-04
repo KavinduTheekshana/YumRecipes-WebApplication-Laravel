@@ -1,0 +1,29 @@
+
+.accountbg {
+  background: url("../images/bg-1.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  box-shadow:inset 0 0 0 2000px rgba($gray-900,.9);
+  .account-title{
+    width: 470px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    h1{
+      font-size: 40px;
+    }
+  }
+}
+
+
+.error-content {
+  h1 {
+    font-size: 98px;
+    font-weight: 700;
+    line-height: 150px;
+    text-shadow: rgb(255, 255, 255) 1px 1px, rgb(68, 162, 210) 2px 2px, rgb(68, 162, 210) 3px 3px;
+  }
+}

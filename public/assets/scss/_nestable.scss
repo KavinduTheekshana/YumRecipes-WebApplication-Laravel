@@ -1,0 +1,22 @@
+
+.custom-dd {
+  max-width: 100%;
+}
+
+.dd-handle{
+  height: 40px;
+  padding: 10px;
+  border: 1px solid $gray-200;
+  background-color: lighten($gray-200, 5%);
+  border-radius: 3px;
+  font-weight: normal;
+  &:hover{
+    background-color: lighten($gray-200, 5%);
+    color: $primary;
+  }
+}
+.dd-item > button{
+  height: 25px;
+  margin: 8px 0 0;
+  font-size: 18px;
+}

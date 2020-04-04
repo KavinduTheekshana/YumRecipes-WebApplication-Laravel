@@ -1,0 +1,29 @@
+
+.error {
+  color: $danger;
+}
+
+.parsley-error {
+  border-color: $danger;
+}
+.parsley-errors-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.parsley-errors-list.filled {
+  display: block;
+}
+.parsley-errors-list > li {
+  font-size: 12px;
+  list-style: none;
+  color: $danger;
+  margin-top: 5px;
+}
+
+.was-validated .custom-file-input:invalid~.custom-file-label,.custom-file-label {
+  line-height: 26px;
+  &::after{
+    line-height: 26px;
+  }
+}

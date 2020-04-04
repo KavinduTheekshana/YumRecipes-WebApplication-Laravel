@@ -1,0 +1,63 @@
+
+label,.col-form-label{
+  font-size: 13px;
+  font-weight: 500;
+  color: $gray-600;
+}
+.form-control{
+  font-size: 13px;
+  height: 38px;
+  &:focus {
+    border-color: $gray-500;
+    box-shadow: none;
+  }
+}
+
+.input-group{
+  .input-group-text{
+    font-size: 13px;
+  }
+}
+
+dt {
+  font-weight: 500;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: $primary;
+}
+.custom-control-label::before,.custom-control-label::after {
+  top: 2px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: $gray-500;
+}
+
+.form-control::-moz-placeholder {
+  color: $gray-500;
+}
+
+.form-control:-ms-input-placeholder {
+  color: $gray-500;
+}
+
+.form-control::-ms-input-placeholder {
+  color: $gray-500;
+}
+
+.form-control::placeholder {
+  color: $gray-500;
+}
+
+
+.custom-range::-webkit-slider-thumb{
+  background-color: $primary !important;
+}
+.custom-range::-moz-range-thumb{
+  background-color: $primary !important;
+}
+.custom-range::-ms-thumb{
+  background-color: $primary !important;
+}

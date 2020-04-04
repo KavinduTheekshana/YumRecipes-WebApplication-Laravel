@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
+
+// Color variables
+
+$white:                     #ffffff;
+$primary:                   #44a2d2;
+$secondary:                 #9a9a9a;
+$success:                   #0acf97;
+$info:                      #2d7bf4;
+$warning:                   #f9bc0b;
+$danger:                    #f1556c;
+$purple:                    #777edd;
+$pink:                      #ff679b;
+$muted:                     #98a6ad;
+$dark:                      #313a46;
+$light:                     #e7eff7;
+
+// Gray Colors
+$gray-100:                  #f8f9fa;
+$gray-200:                  #e9ecef;
+$gray-300:                  #dee2e6;
+$gray-400:                  #ced4da;
+$gray-500:                  #adb5bd;
+$gray-600:                  #6c757d;
+$gray-700:                  #495057;
+$gray-800:                  #343a40;
+$gray-900:                  #212529;
+
+
+
+// Body Background
+$bg-body:                   #f2f5f7;
+
+// Topbar
+$topbar-height:               70px;
+$bg-navbar:                 #44a2d2; 
+$bg-logo:                   #44a2d2;
+
+
+// Left-sidebar
+$bg-leftbar:                #ffffff;
+$leftbar-width:               240px;
+$leftbar-width-collapsed:     70px;
+$menu-item-color:           #646a79;
+$menu-item-hover-color:     #44a2d2;
+$menu-sub-item-color:       #676c79;
+$menu-sub-item-hover-color: #44a2d2;
+
+// Font variables
+$font-primary:                'Rubik', sans-serif;
+
+// Font Base
+$font-size-base:              14px;
+
+// Shadow
+$shadow:                      0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+$shadow-lg:                   0 0 24px 0 rgba(0, 0, 0, 0.15), 0 1px 0 0 rgba(0, 0, 0, 0.1);
