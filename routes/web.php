@@ -19,4 +19,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/home', 'HomeController@index')->middleware('Admin');
+
+Route::get('/userslist', 'UsersController@userslist')->middleware('Admin');
+
+
+Route::get('logout', function () {
+    Auth::logout();
+    // return Redirect::route('login');
+    return Redirect('/');
+});
+
