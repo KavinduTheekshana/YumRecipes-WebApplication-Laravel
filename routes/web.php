@@ -21,9 +21,16 @@ Auth::routes();
 
 // Route::get('logout', 'Auth\LoginController@logout');
 
-Route::get('/home', 'HomeController@index')->middleware('Admin');
+Route::get('home', 'HomeController@index')->middleware('Admin');
 
-Route::get('/userslist', 'UsersController@userslist')->middleware('Admin');
+Route::get('userslist', 'UsersController@userslist')->middleware('Admin');
+Route::get('user_diactivate/{id}', 'UsersController@user_diactivate')->middleware('Admin');
+Route::get('user_activate/{id}', 'UsersController@user_activate')->middleware('Admin');
+Route::get('user_delete/{id}', 'UsersController@user_delete')->middleware('Admin');
+
+Route::get('categorys', 'CategoryController@categorys')->middleware('Admin');
+Route::POST('savecategory', 'CategoryController@savecategory')->middleware('Admin');
+Route::get('categories_delete/{id}', 'CategoryController@categories_delete')->middleware('Admin');
 
 
 Route::get('logout', function () {

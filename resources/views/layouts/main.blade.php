@@ -21,6 +21,10 @@
         <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
+        <!-- Dropzone css -->
+        <link href="assets/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+        <link href="assets/plugins/dropify/css/dropify.min.css" rel="stylesheet">
+
     </head>
 
     <body>
@@ -153,6 +157,12 @@
                     <li>
                         <a href="userslist">
                             <i class="mdi mdi-account-multiple"></i><span>Users</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorys">
+                            <i class="mdi mdi-buffer"></i><span>Categorys</span>
                         </a>
                     </li>
 
@@ -307,8 +317,17 @@
             </div>
             <!-- end left-sidenav-->
 
+            <!-- Page Content-->
+            <div class="page-content">
+
 
             @yield('content')
+
+            <footer class="footer text-center text-sm-left">
+                © 2020 Yum Recipes.
+            </footer>
+        </div>
+        <!-- end page content -->
 
 
 
@@ -355,6 +374,12 @@
  
          <!-- Datatable init js -->
          <script src="assets/pages/jquery.table-datatable.js"></script>  
+
+         <!-- Dropzone js -->
+        <script src="assets/plugins/dropzone/dist/dropzone.js"></script>
+        <script src="assets/plugins/dropify/js/dropify.min.js"></script>
+        <script src="assets/pages/jquery.dropzone.init.js"></script> 
+
  
 
     </body>
