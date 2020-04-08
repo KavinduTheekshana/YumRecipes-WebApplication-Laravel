@@ -40,6 +40,13 @@ Route::get('recipe_activate/{id}', 'RecipeController@recipe_activate')->middlewa
 Route::get('recipe_delete/{id}', 'RecipeController@recipe_delete')->middleware('Admin');
 
 
+
+Route::get('profile', 'UsersController@profile')->middleware('Admin');
+Route::POST('changePassword', 'UsersController@changePassword')->middleware('Admin');
+Route::POST('updateprofilepicture', 'UsersController@updateprofilepicture')->middleware('Admin');
+Route::POST('updateprofiledetails', 'UsersController@updateprofiledetails')->middleware('Admin');
+
+
 Route::get('logout', function () {
     Auth::logout();
     // return Redirect::route('login');

@@ -97,12 +97,23 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="" type="button" class="btn btn-outline-dark mr-1"> <i class="far fa-eye"></i></button>
-                                        <a href="recipe_delete/{{$recipe->id}}" type="button" class="btn btn-outline-danger mr-1"> <i class="fas fa-trash-alt"></i></button>
+                                        <button data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-lg" type="button" onclick="viewData({{$recipe->id}})" class="btn btn-outline-dark mr-1"> <i class="far fa-eye"></i></button>
+                                        
+                                        <input type="hidden"  
+                                             modalname="{{$recipe->recipename}}"
+                                             modelimage="{{$recipe->recipeimage}}"
+                                             modelingredients="{{$recipe->recipeingredients}}"
+                                             modeldescription="{!!$recipe->recipedescription!!}" 
+                                             modelcategoryname="{{$recipe->categoryname}}" 
+                                             id="recipes{{$recipe->id}}">
+
+
+                                        
+                                        <a href="recipe_delete/{{$recipe->id}}" type="button" class="btn btn-outline-danger mr-1"> <i class="fas fa-trash-alt"></i></a>
                                         @if($recipe->recipestatus)
-                                        <a href="recipe_diactivate/{{$recipe->id}}" type="button" class="btn btn-outline-warning"> <i class="fas fa-lock"></i></button>
+                                        <a href="recipe_diactivate/{{$recipe->id}}" type="button" class="btn btn-outline-warning"> <i class="fas fa-lock"></i></a>
                                         @else
-                                        <a href="recipe_activate/{{$recipe->id}}" type="button" class="btn btn-outline-success"> <i class=" fas fa-unlock-alt"></i></button>
+                                        <a href="recipe_activate/{{$recipe->id}}" type="button" class="btn btn-outline-success"> <i class=" fas fa-unlock-alt"></i></a>
                                         @endif
                                         
                                     </td>
@@ -121,6 +132,62 @@
 
 
 
+ <!--  Modal content for the above example -->
+ <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title align-self-center mt-0" id="modalnamez"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                 <div class="col-md-8">
+                    <img src="modelimagez" id="modelimagez" class="img-fluid">
+                 </div>
+                 <div class="col-md-4">
+                    <h4 class="modal-title align-self-center mt-0">Ingredients</h4>
+                    <hr>
+                    <p id="modelingredientsz"></p>
+                 </div>
+               </div>
+                  <br>
+
+               <div>
+                <h4 class="modal-title align-self-center mt-0">Description</h4>
+                <p id="modeldescriptionz"></p>
+               </div>
+
+               <div>
+                <h4 class="modal-title align-self-center mt-0">Category Name</h4>
+                <p id="modelcategorynamez"></p>
+               </div>
+
+
+
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<script>
+    function viewData(id){
+
+        var imageurl = $("#recipes"+id).attr("modelimage");
+        document.getElementById("modelimagez").src= imageurl;
+
+        $("#modalnamez").text($("#recipes"+id).attr('modalname'));
+        $("#modelingredientsz").text($("#recipes"+id).attr('modelingredients'));
+        $("#modeldescriptionz").html($("#recipes"+id).attr('modeldescription'));
+        $("#modelcategorynamez").text($("#recipes"+id).attr('modelcategoryname'));
+
+    }
+
+</script>
 
 
 @endsection

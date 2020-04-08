@@ -4464,10 +4464,10 @@ input[switch="purple"]:checked+label {
     background-color: transparent;
 }
 
-#settings .dropify-wrapper {
-    width: 14%;
+#profile .dropify-wrapper {
+    width: 300px;
     height: 164px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .mfp-with-zoom .mfp-container,
