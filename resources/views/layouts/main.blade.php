@@ -25,6 +25,9 @@
         <link href="assets/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
         <link href="assets/plugins/dropify/css/dropify.min.css" rel="stylesheet">
 
+        {{-- Select2 --}}
+        <link href="assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+
     </head>
 
     <body>
@@ -167,11 +170,10 @@
                     </li>
 
                     <li>
-                        <a href="javascript: void(0);"><i class="mdi mdi-email-variant"></i><span>Email</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <a href="javascript: void(0);"><i class="mdi mdi-food"></i><span>Recipes</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="email-inbox.html">Inbox</a></li>
-                            <li><a href="email-read.html">Read Email</a></li>
-                            <li><a href="email-compose.html">Compose Email</a></li>
+                            <li><a href="addrecipes">Add Recipes</a></li>
+                            <li><a href="managerecipes">Manage Recipes</a></li>
                         </ul>
                     </li>
 
@@ -379,6 +381,17 @@
         <script src="assets/plugins/dropzone/dist/dropzone.js"></script>
         <script src="assets/plugins/dropify/js/dropify.min.js"></script>
         <script src="assets/pages/jquery.dropzone.init.js"></script> 
+
+         <!--Wysiwig js-->
+         <script src="assets/plugins/tinymce/tinymce.min.js"></script>
+         <script src="assets/pages/jquery.form-editor.js"></script>
+
+         <!-- Plugins Init js -->
+        <script src="assets/pages/jquery.form-advanced.init.js"></script>  
+
+        {{-- select2 --}}
+        <script src="assets/plugins/select2/select2.min.js"></script>
+
 
  
 

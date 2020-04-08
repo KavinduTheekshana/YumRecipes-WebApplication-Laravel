@@ -75,7 +75,7 @@
                                             <div class="form-group row">
                                                 <label for="example-text-input" class="col-sm-2 col-form-label">Image</label>
                                                 <div class="col-sm-10">
-                                                    <input type="file" name="image" id="input-file-now-custom-1" class="dropify" data-default-file="assets/plugins/dropify/images/test-image-1.png" required/>
+                                                    <input type="file" id="input-file-now" class="dropify" name="image" required/>
                                                 </div>
                                             </div>
 
@@ -136,7 +136,7 @@
                                 @foreach($categories as $category)
                             <tr>
                                 <td>{{$category->id}}</td>
-                                <td><img src="{{$category->image}}" alt="" class="thumb-md mr-2" data-toggle="tooltip" title="" data-original-title="school project"> </td>
+                                <td><img src="{{$category->image}}" alt="" class="thumb-md mr-2" data-toggle="tooltip"> </td>
                                 <td>{{$category->name}}</td>
                                 <td>
                                     <a href="categories_delete/{{$category->id}}" type="button" class="btn btn-outline-danger"> <i class="fas fa-trash-alt"></i></button>

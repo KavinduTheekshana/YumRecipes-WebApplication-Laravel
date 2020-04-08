@@ -32,6 +32,13 @@ Route::get('categorys', 'CategoryController@categorys')->middleware('Admin');
 Route::POST('savecategory', 'CategoryController@savecategory')->middleware('Admin');
 Route::get('categories_delete/{id}', 'CategoryController@categories_delete')->middleware('Admin');
 
+Route::get('addrecipes', 'RecipeController@addrecipes')->middleware('Admin');
+Route::POST('saverecipes', 'RecipeController@saverecipes')->middleware('Admin');
+Route::get('managerecipes', 'RecipeController@managerecipes')->middleware('Admin');
+Route::get('recipe_diactivate/{id}', 'RecipeController@recipe_diactivate')->middleware('Admin');
+Route::get('recipe_activate/{id}', 'RecipeController@recipe_activate')->middleware('Admin');
+Route::get('recipe_delete/{id}', 'RecipeController@recipe_delete')->middleware('Admin');
+
 
 Route::get('logout', function () {
     Auth::logout();

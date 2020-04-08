@@ -46,7 +46,7 @@
                     <div class="card-body">
 
                         <h5 class="mt-0">All Users List</h5>
-                        <p class="text-muted font-13 mb-4">You can Edit Uses Date and Manage them easyly
+                        <p class="text-muted font-13 mb-4">You can Edit Uses Data and Manage them easyly
                         </p>
 
     
@@ -55,6 +55,7 @@
                             <table id="datatable-buttons" class="table table-striped table-bordered w-100">
                                 <thead>
                                 <tr>
+                                    <th>Image</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Joined Date</th>
@@ -67,6 +68,7 @@
                                 <tbody>
                                     @foreach($allusers as $user)
                                 <tr>
+                                    <td><img src="{{$user->profile_pic}}" alt="" class="thumb-md mr-2 rounded-circle" data-toggle="tooltip"></td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{ date('d-M-Y', strtotime($user->created_at)) }}</td>

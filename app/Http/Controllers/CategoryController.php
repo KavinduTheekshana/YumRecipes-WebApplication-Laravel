@@ -48,8 +48,5 @@ class CategoryController extends Controller
         } else {
             return redirect()->back()->with('category_cantdelete_status', 'You cant delete this Category,Because Recipes Are availabe in this category');
         }
-        
-        return $count;
-        
       }
 }
