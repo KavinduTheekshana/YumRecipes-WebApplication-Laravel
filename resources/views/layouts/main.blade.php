@@ -37,7 +37,7 @@
 
             <!-- LOGO -->
             <div class="topbar-left">
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <span>
                         <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg">
                     </span>
