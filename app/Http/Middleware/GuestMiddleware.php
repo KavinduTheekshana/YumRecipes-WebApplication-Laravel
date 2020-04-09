@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class AdminMiddleware
+class GuestMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,13 +15,15 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        // if(auth()->user()->user_type == false && auth()->user()->status == true){
+
+        // if(auth()->user()->user_type == true && auth()->user()->status == true){
         //     return $next($request);
         // }
 
+
         if(auth()->user()==null){
             return redirect()->route('logout');
-        }else if(auth()->user()->user_type == false && auth()->user()->status == true){
+        }else if(auth()->user()->user_type == true && auth()->user()->status == true){
             return $next($request);
         }
         return redirect()->route('logout');
