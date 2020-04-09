@@ -32,21 +32,21 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->middleware('auth');
 
-Route::get('userslist', 'UsersController@userslist')->middleware('auth');
-Route::get('user_diactivate/{id}', 'UsersController@user_diactivate')->middleware('auth');
-Route::get('user_activate/{id}', 'UsersController@user_activate')->middleware('auth');
-Route::get('user_delete/{id}', 'UsersController@user_delete')->middleware('auth');
+Route::get('userslist', 'UsersController@userslist')->middleware('admin');
+Route::get('user_diactivate/{id}', 'UsersController@user_diactivate')->middleware('admin');
+Route::get('user_activate/{id}', 'UsersController@user_activate')->middleware('admin');
+Route::get('user_delete/{id}', 'UsersController@user_delete')->middleware('admin');
 
-Route::get('categorys', 'CategoryController@categorys')->middleware('auth');
-Route::POST('savecategory', 'CategoryController@savecategory')->middleware('auth');
-Route::get('categories_delete/{id}', 'CategoryController@categories_delete')->middleware('auth');
+Route::get('categorys', 'CategoryController@categorys')->middleware('admin');
+Route::POST('savecategory', 'CategoryController@savecategory')->middleware('admin');
+Route::get('categories_delete/{id}', 'CategoryController@categories_delete')->middleware('admin');
 
 Route::get('addrecipes', 'RecipeController@addrecipes')->middleware('auth');
 Route::POST('saverecipes', 'RecipeController@saverecipes')->middleware('auth');
-Route::get('managerecipes', 'RecipeController@managerecipes')->middleware('auth');
-Route::get('recipe_diactivate/{id}', 'RecipeController@recipe_diactivate')->middleware('auth');
-Route::get('recipe_activate/{id}', 'RecipeController@recipe_activate')->middleware('auth');
-Route::get('recipe_delete/{id}', 'RecipeController@recipe_delete')->middleware('auth');
+Route::get('managerecipes', 'RecipeController@managerecipes')->middleware('admin');
+Route::get('recipe_diactivate/{id}', 'RecipeController@recipe_diactivate')->middleware('admin');
+Route::get('recipe_activate/{id}', 'RecipeController@recipe_activate')->middleware('admin');
+Route::get('recipe_delete/{id}', 'RecipeController@recipe_delete')->middleware('admin');
 
 
 

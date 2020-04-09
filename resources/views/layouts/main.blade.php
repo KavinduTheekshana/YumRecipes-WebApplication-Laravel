@@ -113,17 +113,22 @@
                         <a href="home"><i class="mdi mdi-speedometer"></i><span>Dashboards</span></a>
                     </li>
 
+                    @if (Auth::user() && Auth::user()->user_type == false)
                     <li>
                         <a href="userslist">
                             <i class="mdi mdi-account-multiple"></i><span>Users</span>
                         </a>
                     </li>
+                    
 
                     <li>
                         <a href="categorys">
                             <i class="mdi mdi-buffer"></i><span>Categorys</span>
                         </a>
                     </li>
+                    
+
+                
 
                     <li>
                         <a href="javascript: void(0);"><i class="mdi mdi-food"></i><span>Recipes</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
@@ -132,8 +137,16 @@
                             <li><a href="managerecipes">Manage Recipes</a></li>
                         </ul>
                     </li>
+                    @endif
 
-                    
+
+                    @if (Auth::user() && Auth::user()->user_type == true)
+                    <li>
+                        <a href="addrecipes">
+                            <i class="mdi mdi-food"></i><span>Add Recipes</span>
+                        </a>
+                    </li>
+                    @endif
                     
 
                    
