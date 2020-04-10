@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('mobilelogin','auth\LoginController@mobileLogin');
+Route::get('checkLogin','auth\LoginController@checkLogin');
+
+
+Route::get('signup','auth\RegisterController@signup');

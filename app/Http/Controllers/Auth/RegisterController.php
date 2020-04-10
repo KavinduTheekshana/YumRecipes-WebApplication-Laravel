@@ -8,6 +8,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use DB;
 
 class RegisterController extends Controller
 {
@@ -70,4 +72,35 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+
+    public function signup(Request $request){
+        $JsonArray=[];
+
+        $username = utf8_decode($request->username);
+        $email = utf8_decode($request->email);
+        $password = utf8_decode($request->password);
+
+
+        $isAvailableEmail = DB::table('users')->where('email', $email)->count();
+
+        if ($isAvailableEmail == null) {
+            $user = new User();
+            $user->name = $username;
+            $user->email = $email;
+            $user->password = Hash::make($password);
+            $user->save();
+            $JsonArray['code']='1';
+            $JsonArray['msg']='Signup Successfully'; 
+        }else{
+            $JsonArray['code']='0';
+            $JsonArray['msg']='Email Address is Alredy Used.'; 
+        }
+
+        
+
+        return json_encode($JsonArray);
+    }
+
+
 }
