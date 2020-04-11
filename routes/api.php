@@ -23,3 +23,11 @@ Route::get('checkLogin','auth\LoginController@checkLogin');
 
 
 Route::get('signup','auth\RegisterController@signup');
+
+
+Route::get('verificationcode','auth\ResetPasswordController@verificationcode');
+Route::get('checkverificationcode','auth\ResetPasswordController@checkverificationcode');
+Route::get('resetpasswordmobile','auth\ResetPasswordController@resetpasswordmobile');
+
+
+
