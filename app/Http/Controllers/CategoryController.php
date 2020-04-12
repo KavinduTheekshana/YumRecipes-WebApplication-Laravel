@@ -49,4 +49,19 @@ class CategoryController extends Controller
             return redirect()->back()->with('category_cantdelete_status', 'You cant delete this Category,Because Recipes Are availabe in this category');
         }
       }
+
+
+
+      public function getCategoryItem(){
+        
+  
+        $CategoryItem = DB::table('categories')->get();
+
+  
+            return $CategoryItem;
+
+      }
+
+
+
 }

@@ -93,4 +93,21 @@ class RecipeController extends Controller
             DB::table('likes')->where('recipe_id', $id)->delete();
             return redirect()->back()->with('user_diactivate_status', 'Recipe Delete Sucessfully');
       }
+
+      public function getcookbookitem(Request $request){
+
+        $id = $request->userid;
+
+        $recipes = DB::table('recipes')
+        ->join('users', 'recipes.user_id', '=', 'users.id')
+        ->join('likes', 'recipes.id', '=', 'likes.recipe_id')
+        ->select('recipes.id as id','recipes.name as recipename','recipes.created_at as date',
+        'recipes.description as recipedescription','recipes.image as recipeimage','recipes.status as recipestatus',
+         'likes.likes as recipeslikes')
+         ->where('users.id',$id)
+        ->orderBy('id', 'desc')->get();
+
+          return $recipes;
+
+    }
 }

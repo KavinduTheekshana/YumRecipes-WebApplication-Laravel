@@ -30,4 +30,5 @@ Route::get('checkverificationcode','auth\ResetPasswordController@checkverificati
 Route::get('resetpasswordmobile','auth\ResetPasswordController@resetpasswordmobile');
 
 
-
+Route::get('getCategoryItem','CategoryController@getCategoryItem');
+Route::get('getcookbookitem','RecipeController@getcookbookitem');
