@@ -159,7 +159,15 @@ class LoginController extends Controller
     public function changeprofiledetails(Request $request){
         $JsonArray=[];
         if(isset($request->uid) && isset($request->name) && $request->uid!="" &&  $request->name!=""){
-            $user = DB::table('users')->where('id','=', $request->uid)->update(['name' => $request->name]);  
+
+            $decodedImage = base64_decode(($request->image));
+            if(isset($request->image)){
+                $UserImage = 'uploads/profile_pic/'. date('YmdHis').".jpg";
+                file_put_contents($UserImage, $decodedImage);
+            }
+
+
+            $user = DB::table('users')->where('id','=', $request->uid)->update(['name' => $request->name,'profile_pic'=>$UserImage]);  
             if($user!=null){
 
                 $userdetails = DB::table('users')->where('id','=', $request->uid)->first();

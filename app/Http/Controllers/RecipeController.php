@@ -167,9 +167,6 @@ class RecipeController extends Controller
            $recipes->description = $recipes_description;
 
            $decodedImage = base64_decode(($request->image));
- 
-            
-
             if(isset($request->image)){
                 $recipe_image = 'uploads/recipes/'. date('YmdHis').".jpg";
                 file_put_contents($recipe_image, $decodedImage);

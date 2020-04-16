@@ -22,7 +22,7 @@ Route::get('mobilelogin','auth\LoginController@mobileLogin');
 Route::get('checkLogin','auth\LoginController@checkLogin');
 Route::get('currentpassword','auth\LoginController@currentpassword');
 Route::get('updatePasswordMobile','auth\LoginController@updatePasswordMobile');
-Route::get('changeprofiledetails','auth\LoginController@changeprofiledetails');
+Route::POST('changeprofiledetails','auth\LoginController@changeprofiledetails');
 
 
 Route::get('signup','auth\RegisterController@signup');
