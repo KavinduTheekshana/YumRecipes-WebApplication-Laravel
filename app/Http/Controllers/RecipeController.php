@@ -100,10 +100,13 @@ class RecipeController extends Controller
 
         $recipes = DB::table('recipes')
         ->join('users', 'recipes.user_id', '=', 'users.id')
-        ->join('likes', 'recipes.id', '=', 'likes.recipe_id')
-        ->select('recipes.id as id','recipes.name as recipename','recipes.created_at as date',
-        'recipes.description as recipedescription','recipes.image as recipeimage','recipes.status as recipestatus',
-         'likes.likes as recipeslikes')
+            ->join('categories', 'recipes.category_id', '=', 'categories.id')
+            ->join('likes', 'recipes.id', '=', 'likes.recipe_id')
+            ->select('recipes.id as id','recipes.name as recipename','recipes.ingredients as recipeingredients',
+            'recipes.description as recipedescription','recipes.image as recipeimage','recipes.status as recipestatus',
+             'categories.name as categoryname', 'categories.id as categoryid',
+             'users.profile_pic as userimage','users.name as username',
+             'likes.likes as recipeslikes')
          ->where('users.id',$id)
         ->orderBy('id', 'desc')->get();
 
