@@ -34,4 +34,10 @@ Route::get('resetpasswordmobile','auth\ResetPasswordController@resetpasswordmobi
 
 
 Route::get('getCategoryItem','CategoryController@getCategoryItem');
+
 Route::get('getcookbookitem','RecipeController@getcookbookitem');
+Route::POST('saverecipesmobile','RecipeController@saverecipesmobile');
+Route::get('imageupload','RecipeController@imageupload');
+
+
+Route::get('menus','RecipeController@menus');
