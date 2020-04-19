@@ -163,7 +163,7 @@
                                                                 <input type="hidden" modalname="{{$recipe->recipename}}"
                                                                     modelimage="{{$recipe->recipeimage}}"
                                                                     modelingredients="{{$recipe->recipeingredients}}"
-                                                                    modeldescription="{!!$recipe->recipedescription!!}"
+                                                                    modeldescription="{{$recipe->recipedescription}}"
                                                                     modelcategoryname="{{$recipe->categoryname}}"
                                                                     id="recipes{{$recipe->id}}">
 
